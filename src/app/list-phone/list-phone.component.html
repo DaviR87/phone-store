@@ -1,0 +1,17 @@
+<div class="btn-container">
+	<button mat-raised-button color="primary" (click)="getPhones()">Get Phones</button>
+</div>
+
+<div class="wrapper">
+	<mat-card *ngFor="let phone of phoneList">
+		<mat-card-title>ID: {{ phone.id }}</mat-card-title>
+		<mat-card-content>
+
+			<div>ID: {{ phone.id }} </div>
+			<div>Model: {{ phone.model }} </div>
+		</mat-card-content>
+		<button mat-raised-button color="warn" (click)="deletePhone(phone.id)">X</button>
+	</mat-card>
+</div>
+
+<!-- <button (click)="deletePhones()">Delete Phones</button> -->

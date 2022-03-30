@@ -1,0 +1,19 @@
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+mat-card {
+    margin: 10px;
+    min-width: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: bisque;
+}
