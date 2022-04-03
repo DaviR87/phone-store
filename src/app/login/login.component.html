@@ -13,8 +13,10 @@
 			</div>
 			<div>
 				<mat-form-field appearance="fill">
-					<mat-label>Password</mat-label>
-					<input matInput type="password" formControlName="password">
+					<mat-label>Email</mat-label>
+					<input matInput type="email" formControlName="email">
+					<mat-error *ngIf="formUser.get('email').errors?.['required']">Email is required</mat-error>
+					<mat-error *ngIf="formUser.get('email').errors?.['email']">Not a valid email</mat-error>
 				</mat-form-field>
 			</div>
 			<button mat-raised-button color="primary" [disabled]="!formUser.valid" type="submit">Submit</button>
@@ -23,5 +25,3 @@
 </mat-card>
 
 </div>
-
-{{ token }}
